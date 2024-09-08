@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		/* #070C15 */
+		/* hsl(219 50% 5%) */
+		/* #F2F4FB */
+		/* hsl(227 53% 97%) */
+		/* #1B3B86 */
+		/* hsl(222 66% 32%) */
+		/* #5585f4 */
+		/* hsl(222 88% 65%) */
+		/* #DD113A */
+		/* hsl(348 86% 47%) */
+		/* #C6CEE3 */
+		/* hsl(223 34% 83%) */
+
+		--background: 219 50% 5%;
+		--foreground: 227 53% 97%;
+		--card: 223 34% 83%;
+		--card-foreground: 219 50% 5%;
+		--popover: 0 0% 100%;
+		--popover-foreground: 222.2 84% 4.9%;
+		--primary: 222 66% 32%;
+		--primary-foreground: 227 53% 97%;
+		--secondary: 222 88% 65%;
+		--secondary-foreground: 227 53% 97%;
+		--muted: 210 40% 96.1%;
+		--muted-foreground: 215.4 16.3% 46.9%;
+		--accent: 348 86% 47%;
+		--accent-foreground: 227 53% 97%;
+		--destructive: 348 86% 47%;
+		--destructive-foreground: 227 53% 97%;
+		--border: 223 34% 83%;
+		--input: 214.3 31.8% 91.4%;
+		/* --ring: 221.2 83.2% 53.3%; */
+		--ring: 222 88% 65%;
+		--radius: 1rem;
+		--chart-1: 12 76% 61%;
+		--chart-2: 173 58% 39%;
+		--chart-3: 197 37% 24%;
+		--chart-4: 43 74% 66%;
+		--chart-5: 27 87% 67%;
+	}
+
+	.dark {
+		--background: 222.2 84% 4.9%;
+		--foreground: 210 40% 98%;
+		--card: 222.2 84% 4.9%;
+		--card-foreground: 210 40% 98%;
+		--popover: 222.2 84% 4.9%;
+		--popover-foreground: 210 40% 98%;
+		--primary: 217.2 91.2% 59.8%;
+		--primary-foreground: 222.2 47.4% 11.2%;
+		--secondary: 217.2 32.6% 17.5%;
+		--secondary-foreground: 210 40% 98%;
+		--muted: 217.2 32.6% 17.5%;
+		--muted-foreground: 215 20.2% 65.1%;
+		--accent: 217.2 32.6% 17.5%;
+		--accent-foreground: 210 40% 98%;
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 210 40% 98%;
+		--border: 217.2 32.6% 17.5%;
+		--input: 217.2 32.6% 17.5%;
+		--ring: 224.3 76.3% 48%;
+		--chart-1: 220 70% 50%;
+		--chart-2: 160 60% 45%;
+		--chart-3: 30 80% 55%;
+		--chart-4: 280 65% 60%;
+		--chart-5: 340 75% 55%;
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply bg-background text-foreground selection:bg-secondary selection:text-secondary-foreground;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-bold uppercase;
+	}
+	:target {
+		@apply scroll-mt-[6rem];
+	}
+}
