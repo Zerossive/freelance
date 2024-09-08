@@ -1,4 +1,3 @@
-import React from 'react'
 import { createLazyFileRoute } from '@tanstack/react-router'
 import { CallToAction } from '@/components/CallToAction'
 import { Article } from '@/components/Article'

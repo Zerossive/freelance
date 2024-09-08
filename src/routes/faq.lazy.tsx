@@ -7,10 +7,9 @@ import {
 } from '@/components/ui/accordion'
 import { Button } from '@/components/ui/button'
 import { createLazyFileRoute, Link } from '@tanstack/react-router'
-import React, { useState } from 'react'
 
 export const FAQPage = () => {
-	const [faqList, setFaqList] = useState([
+	const faqList = [
 		{
 			question: 'How do I get a website made?',
 			answer: (
@@ -184,7 +183,7 @@ export const FAQPage = () => {
 				</>
 			),
 		},
-	])
+	]
 
 	return (
 		<>

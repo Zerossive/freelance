@@ -1,7 +1,7 @@
 import { Header } from '@/components/Header'
 import { Button } from '@/components/ui/button'
 import { createLazyFileRoute, Link } from '@tanstack/react-router'
-import React, { useRef, useState } from 'react'
+import { useState } from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import {
@@ -19,17 +19,16 @@ import { z } from 'zod'
 import { Textarea } from '@/components/ui/textarea'
 import { toast } from '@/hooks/use-toast'
 import emailjs from '@emailjs/browser'
-import { twMerge } from 'tailwind-merge'
 
 const formSchema = z.object({
-	// name: z.string().min(1).max(50),
-	// email: z.string().email(),
-	// phone: z.string().min(8).max(20).or(z.literal('')),
-	// message: z.string().min(1).max(10000),
-	name: z.string(),
-	email: z.string(),
-	phone: z.string(),
-	message: z.string(),
+	name: z.string().min(1).max(50),
+	email: z.string().email(),
+	phone: z.string().min(8).max(20).or(z.literal('')),
+	message: z.string().min(1).max(10000),
+	// name: z.string(),
+	// email: z.string(),
+	// phone: z.string(),
+	// message: z.string(),
 })
 
 export const ContactPage = () => {

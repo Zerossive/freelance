@@ -2,7 +2,7 @@ import { Header } from '@/components/Header'
 import { PricingItem } from '@/components/PricingItem'
 import { Button } from '@/components/ui/button'
 import { createLazyFileRoute, Link } from '@tanstack/react-router'
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 export const PricingPage = () => {
 	const baseline = 300

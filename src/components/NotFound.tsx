@@ -1,5 +1,4 @@
 import { Header } from '@/components/Header'
-import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 
 export const NotFound = () => {
