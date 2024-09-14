@@ -188,7 +188,7 @@ export const FAQPage = () => {
 	return (
 		<>
 			<Header title='faq' />
-			<p className='pb-6'>
+			<p className='container px-0 pb-6'>
 				If you do not find a satisfactory answer, or have any further
 				questions, please contact me{' '}
 				<Button variant='link' size='inline' asChild>
@@ -200,7 +200,7 @@ export const FAQPage = () => {
 				type='single'
 				collapsible
 				defaultValue='0'
-				className='rounded-lg bg-card px-6 py-0 text-card-foreground'
+				className='container rounded-lg bg-card px-6 py-0 text-card-foreground'
 			>
 				{faqList &&
 					faqList.map((qa, index) => {

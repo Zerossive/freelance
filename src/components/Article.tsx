@@ -30,7 +30,7 @@ export const Article = ({
 	return (
 		<div
 			className={twMerge(
-				'flex flex-col items-center justify-between gap-6 pt-32 first-of-type:pt-16 md:flex-row md:gap-12 md:pt-64',
+				'flex flex-col items-center justify-between gap-6 pt-32 first-of-type:pt-16 lg:flex-row lg:gap-12 lg:pt-64',
 				card && '-mx-12',
 				className,
 			)}
@@ -39,8 +39,9 @@ export const Article = ({
 			{(titleLeft || bodyLeft) && (
 				<div
 					className={twMerge(
-						'order-first w-full text-primary-foreground md:w-1/2 md:p-12',
-						card && 'bg-primary p-6 shadow-xl md:rounded-r-xl',
+						'order-first w-full text-primary-foreground lg:w-1/2 xl:p-12',
+						card &&
+							'bg-primary/80 p-6 shadow-md backdrop-blur lg:rounded-r-xl',
 						left,
 					)}
 				>
@@ -55,15 +56,15 @@ export const Article = ({
 			{(titleRight || bodyRight) && (
 				<div
 					className={twMerge(
-						'order-last w-full text-primary-foreground md:w-1/2 md:p-12',
+						'order-last w-full text-primary-foreground lg:w-1/2 xl:p-12',
 						card &&
-							'bg-primary p-6 shadow-xl md:rounded-l-xl md:rounded-r-none',
+							'bg-primary/80 p-6 shadow-md backdrop-blur lg:rounded-l-xl lg:rounded-r-none',
 						right,
 					)}
 				>
 					<article
 						className={twMerge(
-							'float-end prose md:text-right',
+							'lg:float-end prose lg:text-right',
 							card && 'prose-invert',
 						)}
 					>
@@ -73,32 +74,32 @@ export const Article = ({
 				</div>
 			)}
 			{imageLeft && (
-				<div
+				<img
 					className={twMerge(
-						'order-last aspect-video w-full rounded-xl bg-cover bg-left-top p-12 shadow-xl md:order-none md:w-1/2',
+						'order-last aspect-video w-full rounded-xl object-cover object-left-top shadow-md lg:order-none lg:w-1/2',
+						!card && 'xl:ml-12',
 						card &&
 							!titleLeft &&
-							'rounded-none md:rounded-xl md:rounded-l-none',
+							'rounded-none lg:rounded-xl lg:rounded-l-none',
 						left,
 					)}
-					style={{
-						backgroundImage: `url(${imageLeft})`,
-					}}
-				></div>
+					src={imageLeft}
+					alt='screenshot of example website'
+				></img>
 			)}
 			{imageRight && (
-				<div
+				<img
 					className={twMerge(
-						'aspect-video w-full rounded-xl bg-cover bg-left-top p-12 shadow-xl md:w-1/2',
+						'aspect-video w-full rounded-xl object-cover object-left-top shadow-md lg:w-1/2',
+						!card && 'xl:mr-12',
 						card &&
 							!titleRight &&
-							'rounded-none md:rounded-xl md:rounded-r-none',
+							'rounded-none lg:rounded-xl lg:rounded-r-none',
 						right,
 					)}
-					style={{
-						backgroundImage: `url(${imageRight})`,
-					}}
-				></div>
+					src={imageRight}
+					alt='screenshot of example website'
+				></img>
 			)}
 		</div>
 	)

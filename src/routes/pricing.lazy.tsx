@@ -2,6 +2,7 @@ import { Header } from '@/components/Header'
 import { PricingItem } from '@/components/PricingItem'
 import { Button } from '@/components/ui/button'
 import { createLazyFileRoute, Link } from '@tanstack/react-router'
+import { CircleHelp, Mail } from 'lucide-react'
 import { useState } from 'react'
 
 export const PricingPage = () => {
@@ -39,7 +40,7 @@ export const PricingPage = () => {
 		},
 		{
 			name: 'custom feature',
-			desc: 'Features not listed may still be possible.',
+			desc: 'Features not listed may still be possible. Reach out for more information if you have an idea in mind.',
 			price: 0,
 			active: false,
 		},
@@ -49,7 +50,7 @@ export const PricingPage = () => {
 		<>
 			<Header title='Pricing' />
 
-			<ul className='flex flex-col gap-6'>
+			<ul className='flex flex-col gap-6 lg:container'>
 				<li id='required'>
 					<h2 className='text-xl'>required:</h2>
 				</li>
@@ -82,7 +83,7 @@ export const PricingPage = () => {
 					})}
 			</ul>
 
-			<p className='pt-6'>
+			<p className='pt-6 lg:container'>
 				The pricing on this page is for estimation only, and may not
 				reflect the final price. To get a more accurate quote, contact
 				me with you desired features as outlined in the{' '}
@@ -92,7 +93,7 @@ export const PricingPage = () => {
 				.
 			</p>
 
-			<div className='flex flex-col justify-end pt-6 md:flex-row'>
+			<div className='flex flex-col justify-end pt-6 lg:container md:flex-row'>
 				<div className='flex items-center justify-center rounded-t-lg bg-accent px-9 py-2 text-center font-bold uppercase text-accent-foreground md:rounded-l-full'>
 					estimated total:
 				</div>
@@ -107,12 +108,17 @@ export const PricingPage = () => {
 			</div>
 
 			<div className='flex w-full flex-wrap items-center justify-center gap-6 pt-6'>
-				<Button asChild>
-					<Link to='/faq'>faq</Link>
+				<Button size='icon' asChild>
+					<Link to='/faq'>
+						<CircleHelp />
+					</Link>
 				</Button>
 
 				<Button variant='secondary' asChild>
-					<Link to='/contact'>get in contact</Link>
+					<Link to='/contact'>
+						<Mail />
+						get in contact
+					</Link>
 				</Button>
 			</div>
 		</>

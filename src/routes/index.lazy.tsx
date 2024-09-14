@@ -2,6 +2,7 @@ import { createLazyFileRoute } from '@tanstack/react-router'
 import { CallToAction } from '@/components/CallToAction'
 import { Article } from '@/components/Article'
 import { Button } from '@/components/ui/button'
+import { ExternalLink } from 'lucide-react'
 
 export const HomePage = () => {
 	return (
@@ -24,13 +25,14 @@ export const HomePage = () => {
 						business, helping you stand out in a crowded online
 						space.
 					</p>
-					<div className='flex justify-center md:inline-block'>
-						<Button asChild className=''>
+					<div className='flex justify-center lg:inline-block'>
+						<Button asChild>
 							<a
 								href='https://knbracing.com/'
 								className='no-underline'
 								target='_blank'
 							>
+								<ExternalLink />
 								view example
 							</a>
 						</Button>
@@ -50,13 +52,14 @@ export const HomePage = () => {
 						solutions tailored to your business type. Whatever your
 						goals, I can create a website that fits you perfectly.
 					</p>
-					<div className='flex justify-center md:inline-block'>
+					<div className='flex justify-center lg:inline-block'>
 						<Button asChild>
 							<a
 								href='https://dannyharris.info/'
 								className='no-underline'
 								target='_blank'
 							>
+								<ExternalLink />
 								view example
 							</a>
 						</Button>
@@ -88,8 +91,8 @@ export const HomePage = () => {
 						thoughtful modern UX design into projects.
 					</p>
 				</>
-				left='bg-accent'
-				className='gap-16 md:gap-32'
+				left='bg-accent/80'
+				className='gap-16 lg:gap-32'
 				id='about'
 				card
 			/>
