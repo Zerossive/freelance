@@ -26,6 +26,8 @@ export const CallToAction = () => {
 				<div className='scale-90'>
 					<img
 						src='https://images.ctfassets.net/qzvr7dpiuznd/yVZS4zMdstT7mb1mCck16/ca5e117a76cbe0762b0a04cfd017141d/DB_Main.png?w=800&h=600&fm=webp'
+						// src='image-url-full'
+						// srcSet='image-url--400 400w, image-url--1200 1200w'
 						className='transform rounded-lg object-cover shadow-md -rotate-x-30 sm:rotate-x-0 sm:rotate-y-30'
 						alt='back example image of website rotated in 3d'
 					/>
@@ -33,6 +35,8 @@ export const CallToAction = () => {
 				<div className=''>
 					<img
 						src='https://images.ctfassets.net/qzvr7dpiuznd/1P448fZhHIvnCZ9Teps45p/cdd546f8e210447705b7290cd66584f1/AIIR_Home.png?w=800&h=600&fm=webp'
+						// src='image-url-full'
+						// srcSet='image-url--400 400w, image-url--1200 1200w'
 						className='transform rounded-lg object-cover shadow-md -rotate-x-30 sm:rotate-x-0 sm:rotate-y-30'
 						alt='middle example image of website rotated in 3d'
 					/>
@@ -40,6 +44,8 @@ export const CallToAction = () => {
 				<div className='scale-110'>
 					<img
 						src='https://images.ctfassets.net/qzvr7dpiuznd/3QeK1xm1FAdaH7b3i3XaxM/ef8aa8960c56bc9a591a4c465142b0f5/knb-home.png?w=800&h=600&fm=webp'
+						// src='image-url-full'
+						// srcSet='image-url--400 400w, image-url--1200 1200w'
 						className='transform rounded-lg object-cover shadow-md -rotate-x-30 sm:rotate-x-0 sm:rotate-y-30'
 						alt='front example image of website rotated in 3d'
 					/>

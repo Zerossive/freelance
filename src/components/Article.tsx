@@ -3,7 +3,9 @@ import { twMerge } from 'tailwind-merge'
 
 interface ArticleProps extends React.ComponentPropsWithoutRef<'div'> {
 	imageLeft?: string
+	imageLeftSet?: string
 	imageRight?: string
+	imageRightSet?: string
 	titleLeft?: string
 	bodyLeft?: React.ReactNode
 	titleRight?: string
@@ -16,7 +18,9 @@ interface ArticleProps extends React.ComponentPropsWithoutRef<'div'> {
 
 export const Article = ({
 	imageLeft,
+	imageLeftSet,
 	imageRight,
+	imageRightSet,
 	titleLeft,
 	bodyLeft,
 	titleRight,
@@ -84,6 +88,7 @@ export const Article = ({
 						left,
 					)}
 					src={imageLeft}
+					srcSet={imageLeftSet}
 					alt='screenshot of example website'
 				></img>
 			)}
@@ -98,6 +103,7 @@ export const Article = ({
 						right,
 					)}
 					src={imageRight}
+					srcSet={imageRightSet}
 					alt='screenshot of example website'
 				></img>
 			)}

@@ -39,11 +39,17 @@ export const HomePage = () => {
 					</div>
 				</>
 				imageRight='https://images.ctfassets.net/qzvr7dpiuznd/3QeK1xm1FAdaH7b3i3XaxM/ef8aa8960c56bc9a591a4c465142b0f5/knb-home.png?w=800&h=600&fm=webp'
+				imageRightSet=''
+				// src='image-url-full'
+				// srcSet='image-url--400 400w, image-url--1200 1200w'
 				id='brand'
 			/>
 
 			<Article
 				imageLeft='https://images.ctfassets.net/qzvr7dpiuznd/3knjM2WiVAaGzcfXEr0koW/f07112bf17abc6ced9d73d889dbdbead/DH_Main.png?w=800&h=600&fm=webp'
+				imageLeftSet=''
+				// src='image-url-full'
+				// srcSet='image-url--400 400w, image-url--1200 1200w'
 				titleRight='the sky is the limit'
 				bodyRight=<>
 					<p>
