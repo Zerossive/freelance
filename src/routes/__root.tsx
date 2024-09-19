@@ -16,7 +16,7 @@ export const Route = createRootRoute({
 			<Navbar />
 
 			{/* BODY BG */}
-			<div className='w-screen px-6'>
+			<div className='w-screen overflow-hidden px-6'>
 				{/* BODY CONTENT */}
 				<div className='min-h-screen w-full rounded-xl bg-foreground px-6 py-6 text-background'>
 					<ScrollRestoration />

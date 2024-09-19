@@ -20,6 +20,7 @@ import { Textarea } from '@/components/ui/textarea'
 import { toast } from '@/hooks/use-toast'
 import emailjs from '@emailjs/browser'
 import { CircleHelp, Send } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 const formSchema = z.object({
 	name: z.string().min(1).max(50),
@@ -82,10 +83,12 @@ export const ContactPage = () => {
 			<Header title='contact' />
 
 			<Form {...form}>
-				<form
+				<motion.form
 					onSubmit={form.handleSubmit(onSubmit)}
 					className='*:flex-1 flex flex-col flex-wrap justify-start gap-6 lg:container lg:flex-row lg:gap-12'
 					id='myForm'
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
 				>
 					<div className='flex flex-col gap-6'>
 						<FormField
@@ -222,7 +225,7 @@ export const ContactPage = () => {
 							</Button>
 						</div>
 					</div>
-				</form>
+				</motion.form>
 			</Form>
 		</>
 	)

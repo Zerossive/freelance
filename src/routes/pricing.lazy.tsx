@@ -13,6 +13,7 @@ import {
 	PackagePlus,
 } from 'lucide-react'
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 export const PricingPage = () => {
 	const baseline = 300
@@ -65,7 +66,11 @@ export const PricingPage = () => {
 		<>
 			<Header title='Pricing' />
 
-			<ul className='flex flex-col gap-6 lg:container'>
+			<motion.ul
+				className='flex flex-col gap-6 lg:container'
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+			>
 				<li id='required'>
 					<h2 className='text-xl underline'>required:</h2>
 				</li>
@@ -104,7 +109,7 @@ export const PricingPage = () => {
 						})}
 					</div>
 				)}
-			</ul>
+			</motion.ul>
 
 			<p className='pt-6 lg:container'>
 				The pricing on this page is for estimation only, and may not

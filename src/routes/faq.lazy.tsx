@@ -7,6 +7,7 @@ import {
 } from '@/components/ui/accordion'
 import { Button } from '@/components/ui/button'
 import { createLazyFileRoute, Link } from '@tanstack/react-router'
+import { motion } from 'framer-motion'
 
 export const FAQPage = () => {
 	const faqList = [
@@ -188,35 +189,41 @@ export const FAQPage = () => {
 	return (
 		<>
 			<Header title='faq' />
-			<p className='container px-0 pb-6'>
-				If you do not find a satisfactory answer, or have any further
-				questions, please contact me{' '}
-				<Button variant='link' size='inline' asChild>
-					<Link to='/contact'>here</Link>
-				</Button>
-				.
-			</p>
-			<Accordion
-				type='single'
-				collapsible
-				defaultValue='0'
-				className='container rounded-lg bg-card px-6 py-0 text-card-foreground'
-			>
-				{faqList &&
-					faqList.map((qa, index) => {
-						const { question, answer } = qa
-						return (
-							<AccordionItem value={index.toString()} key={index}>
-								<AccordionTrigger className='text-card-foreground/80'>
-									{question}
-								</AccordionTrigger>
-								<AccordionContent className='prose'>
-									{answer}
-								</AccordionContent>
-							</AccordionItem>
-						)
-					})}
-			</Accordion>
+			<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+				<p className='container px-0 pb-6'>
+					If you do not find a satisfactory answer, or have any
+					further questions, please contact me{' '}
+					<Button variant='link' size='inline' asChild>
+						<Link to='/contact'>here</Link>
+					</Button>
+					.
+				</p>
+
+				<Accordion
+					type='single'
+					collapsible
+					defaultValue='0'
+					className='container rounded-lg bg-card px-6 py-0 text-card-foreground'
+				>
+					{faqList &&
+						faqList.map((qa, index) => {
+							const { question, answer } = qa
+							return (
+								<AccordionItem
+									value={index.toString()}
+									key={index}
+								>
+									<AccordionTrigger className='text-card-foreground/80'>
+										{question}
+									</AccordionTrigger>
+									<AccordionContent className='prose'>
+										{answer}
+									</AccordionContent>
+								</AccordionItem>
+							)
+						})}
+				</Accordion>
+			</motion.div>
 		</>
 	)
 }

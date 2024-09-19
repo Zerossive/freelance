@@ -1,5 +1,6 @@
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
+import { motion } from 'framer-motion'
 
 interface ArticleProps extends React.ComponentPropsWithoutRef<'div'> {
 	imageLeft?: string
@@ -41,13 +42,17 @@ export const Article = ({
 			{...rest}
 		>
 			{(titleLeft || bodyLeft) && (
-				<div
+				<motion.div
 					className={twMerge(
 						'order-first w-full text-primary-foreground lg:w-1/2 xl:p-12',
 						card &&
 							'bg-primary/80 p-6 shadow-md backdrop-blur lg:rounded-r-xl',
 						left,
 					)}
+					initial={{ x: -100, opacity: 0 }}
+					whileInView={{ x: 0, opacity: 1 }}
+					viewport={{ once: true, margin: '-200px' }}
+					transition={{ duration: 0.3, ease: 'circOut' }}
 				>
 					<article
 						className={twMerge('prose', card && 'prose-invert')}
@@ -55,16 +60,20 @@ export const Article = ({
 						{titleLeft && <h2>{titleLeft}</h2>}
 						{bodyLeft && <div>{bodyLeft}</div>}
 					</article>
-				</div>
+				</motion.div>
 			)}
 			{(titleRight || bodyRight) && (
-				<div
+				<motion.div
 					className={twMerge(
 						'order-last w-full text-primary-foreground lg:w-1/2 xl:p-12',
 						card &&
 							'bg-primary/80 p-6 shadow-md backdrop-blur lg:rounded-l-xl lg:rounded-r-none',
 						right,
 					)}
+					initial={{ x: 100, opacity: 0 }}
+					whileInView={{ x: 0, opacity: 1 }}
+					viewport={{ once: true, margin: '-200px' }}
+					transition={{ duration: 0.3, ease: 'circOut' }}
 				>
 					<article
 						className={twMerge(
@@ -75,10 +84,10 @@ export const Article = ({
 						{titleRight && <h2>{titleRight}</h2>}
 						{bodyRight && <div>{bodyRight}</div>}
 					</article>
-				</div>
+				</motion.div>
 			)}
 			{imageLeft && (
-				<img
+				<motion.img
 					className={twMerge(
 						'order-last aspect-video w-full rounded-xl object-cover object-left-top shadow-md lg:order-none lg:w-1/2',
 						!card && 'xl:ml-12',
@@ -90,10 +99,14 @@ export const Article = ({
 					src={imageLeft}
 					srcSet={imageLeftSet}
 					alt='screenshot of example website'
-				></img>
+					initial={{ x: -100, opacity: 0 }}
+					whileInView={{ x: 0, opacity: 1 }}
+					viewport={{ once: true, margin: '-200px' }}
+					transition={{ duration: 0.3, ease: 'circOut' }}
+				></motion.img>
 			)}
 			{imageRight && (
-				<img
+				<motion.img
 					className={twMerge(
 						'aspect-video w-full rounded-xl object-cover object-left-top shadow-md lg:w-1/2',
 						!card && 'xl:mr-12',
@@ -105,7 +118,11 @@ export const Article = ({
 					src={imageRight}
 					srcSet={imageRightSet}
 					alt='screenshot of example website'
-				></img>
+					initial={{ x: 100, opacity: 0 }}
+					whileInView={{ x: 0, opacity: 1 }}
+					viewport={{ once: true, margin: '-200px' }}
+					transition={{ duration: 0.3, ease: 'circOut' }}
+				></motion.img>
 			)}
 		</div>
 	)

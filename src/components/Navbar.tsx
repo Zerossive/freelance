@@ -1,6 +1,7 @@
 import { NavButton } from './NavButton'
 import { Button } from '@/components/ui/button'
 import { Link } from '@tanstack/react-router'
+import { motion } from 'framer-motion'
 
 export const Navbar = () => {
 	return (
@@ -13,7 +14,19 @@ export const Navbar = () => {
 						window.scrollTo({ top: 0, behavior: 'smooth' })
 					}
 				>
-					<img src='/vite.svg' className='h-6 w-auto' />
+					<motion.img
+						src='/vite.svg'
+						className='h-6 w-auto'
+						initial={{ rotate: -10, scale: 1 }}
+						animate={{ rotate: 10, scale: 1.1 }}
+						transition={{
+							repeat: Infinity,
+							repeatType: 'reverse',
+							// repeatDelay: 0.5,
+							ease: 'easeInOut',
+							duration: 2,
+						}}
+					/>
 				</Button>
 				<Button
 					className='text-foreground'
