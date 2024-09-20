@@ -1,6 +1,6 @@
 <h1>
   Freelance Web Dev
-  <img src='https://youneedawebsite.netlify.app/vite.svg' style='background-color:transparent;' height='36px' align='right'/>
+  <img src='https://youneedawebsite.netlify.app/favicon.svg' style='background-color:transparent;' height='36px' align='right'/>
 </h1>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ccf417c7-b4fa-40bc-ae42-d8bd1fe4110e/deploy-status)](https://app.netlify.com/sites/youneedawebsite/deploys)

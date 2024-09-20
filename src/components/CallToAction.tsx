@@ -2,6 +2,15 @@ import { CircleHelp, Mail } from 'lucide-react'
 import { Button } from './ui/button'
 import { Link } from '@tanstack/react-router'
 import { motion } from 'framer-motion'
+import example_knb_full from '@/assets/example_knb_full.webp'
+import example_knb_1200 from '@/assets/example_knb_1200.webp'
+import example_knb_400 from '@/assets/example_knb_400.webp'
+import example_imagerequest_full from '@/assets/example_image-request_full.webp'
+import example_imagerequest_1200 from '@/assets/example_image-request_1200.webp'
+import example_imagerequest_400 from '@/assets/example_image-request_400.webp'
+import example_dashboard_full from '@/assets/example_dashboard_full.webp'
+import example_dashboard_1200 from '@/assets/example_dashboard_1200.webp'
+import example_dashboard_400 from '@/assets/example_dashboard_400.webp'
 
 export const CallToAction = () => {
 	const container = {
@@ -55,29 +64,29 @@ export const CallToAction = () => {
 			>
 				<motion.div variants={growSlide}>
 					<img
-						src='https://images.ctfassets.net/qzvr7dpiuznd/yVZS4zMdstT7mb1mCck16/ca5e117a76cbe0762b0a04cfd017141d/DB_Main.png?w=800&h=600&fm=webp'
-						// src='image-url-full'
-						// srcSet='image-url--400 400w, image-url--1200 1200w'
+						src={example_dashboard_full}
+						srcSet={`${example_dashboard_400} 400w, ${example_dashboard_1200} 1200w`}
 						className='scale-90 transform rounded-lg object-cover shadow-md -rotate-x-30 sm:rotate-x-0 sm:rotate-y-30'
 						alt='back example image of website rotated in 3d'
+						loading='lazy'
 					/>
 				</motion.div>
 				<motion.div variants={growSlide}>
 					<img
-						src='https://images.ctfassets.net/qzvr7dpiuznd/1P448fZhHIvnCZ9Teps45p/cdd546f8e210447705b7290cd66584f1/AIIR_Home.png?w=800&h=600&fm=webp'
-						// src='image-url-full'
-						// srcSet='image-url--400 400w, image-url--1200 1200w'
+						src={example_imagerequest_full}
+						srcSet={`${example_imagerequest_400} 400w, ${example_imagerequest_1200} 1200w`}
 						className='transform rounded-lg object-cover shadow-md -rotate-x-30 sm:rotate-x-0 sm:rotate-y-30'
 						alt='middle example image of website rotated in 3d'
+						loading='lazy'
 					/>
 				</motion.div>
 				<motion.div variants={growSlide}>
 					<img
-						src='https://images.ctfassets.net/qzvr7dpiuznd/3QeK1xm1FAdaH7b3i3XaxM/ef8aa8960c56bc9a591a4c465142b0f5/knb-home.png?w=800&h=600&fm=webp'
-						// src='image-url-full'
-						// srcSet='image-url--400 400w, image-url--1200 1200w'
+						src={example_knb_full}
+						srcSet={`${example_knb_400} 400w, ${example_knb_1200} 1200w`}
 						className='scale-110 transform rounded-lg object-cover shadow-md -rotate-x-30 sm:rotate-x-0 sm:rotate-y-30'
 						alt='front example image of website rotated in 3d'
+						loading='lazy'
 					/>
 				</motion.div>
 			</motion.div>

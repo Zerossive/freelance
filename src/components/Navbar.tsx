@@ -15,7 +15,7 @@ export const Navbar = () => {
 					}
 				>
 					<motion.img
-						src='/vite.svg'
+						src='/favicon.svg'
 						className='h-6 w-auto'
 						initial={{ rotate: -10, scale: 1 }}
 						animate={{ rotate: 10, scale: 1.1 }}

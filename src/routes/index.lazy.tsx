@@ -3,6 +3,12 @@ import { CallToAction } from '@/components/CallToAction'
 import { Article } from '@/components/Article'
 import { Button } from '@/components/ui/button'
 import { ExternalLink } from 'lucide-react'
+import example_knb_full from '@/assets/example_knb_full.webp'
+import example_knb_1200 from '@/assets/example_knb_1200.webp'
+import example_knb_400 from '@/assets/example_knb_400.webp'
+import example_portfolio_full from '@/assets/example_portfolio_full.webp'
+import example_portfolio_1200 from '@/assets/example_portfolio_1200.webp'
+import example_portfolio_400 from '@/assets/example_portfolio_400.webp'
 
 export const HomePage = () => {
 	return (
@@ -38,18 +44,14 @@ export const HomePage = () => {
 						</Button>
 					</div>
 				</>
-				imageRight='https://images.ctfassets.net/qzvr7dpiuznd/3QeK1xm1FAdaH7b3i3XaxM/ef8aa8960c56bc9a591a4c465142b0f5/knb-home.png?w=800&h=600&fm=webp'
-				imageRightSet=''
-				// src='image-url-full'
-				// srcSet='image-url--400 400w, image-url--1200 1200w'
+				imageRight={example_knb_full}
+				imageRightSet={`${example_knb_400} 400w, ${example_knb_1200} 1200w`}
 				id='brand'
 			/>
 
 			<Article
-				imageLeft='https://images.ctfassets.net/qzvr7dpiuznd/3knjM2WiVAaGzcfXEr0koW/f07112bf17abc6ced9d73d889dbdbead/DH_Main.png?w=800&h=600&fm=webp'
-				imageLeftSet=''
-				// src='image-url-full'
-				// srcSet='image-url--400 400w, image-url--1200 1200w'
+				imageLeft={example_portfolio_full}
+				imageLeftSet={`${example_portfolio_400} 400w, ${example_portfolio_1200} 1200w`}
 				titleRight='the sky is the limit'
 				bodyRight=<>
 					<p>

@@ -12,7 +12,12 @@ export const Footer = () => {
 	return (
 		<footer className='*:flex-1 flex flex-col flex-wrap items-center justify-between gap-6 p-6 text-center opacity-50 md:flex-row'>
 			<div className='flex flex-wrap items-center justify-center gap-3'>
-				<img src={logoWhite} alt='logo' className='h-6 w-auto' />
+				<img
+					src={logoWhite}
+					alt='logo'
+					className='h-6 w-auto'
+					loading='lazy'
+				/>
 				<span>Freelance Web Dev</span>
 			</div>
 			<nav>
