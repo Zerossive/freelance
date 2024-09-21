@@ -35,9 +35,9 @@ export const FAQPage = () => {
 						</li>
 						<li>
 							You will send all the information you want included
-							on each page. This includes information like: brand
-							name, colors, tag lines, images, links to other
-							websites, etc.
+							on each page. This includes information such as:
+							brand name, colors, tag lines, images, links to
+							other websites, etc.
 						</li>
 						<li>
 							You will be sent one or more mockups using some of
@@ -86,8 +86,8 @@ export const FAQPage = () => {
 			answer: (
 				<>
 					<p>
-						Yes. You can request additional features for the listed
-						or otherwise agreed upon fee.
+						Yes, absolutely. You can request additional features for
+						the listed or otherwise agreed upon fee.
 					</p>
 				</>
 			),
@@ -103,7 +103,7 @@ export const FAQPage = () => {
 					</p>
 					<p>
 						These can include things like comment sections, user
-						uploads, reactive UI animations, etc.
+						uploads, complex UI animations, etc.
 					</p>
 				</>
 			),
@@ -166,12 +166,16 @@ export const FAQPage = () => {
 				<>
 					<p>
 						Yes, there will be a yearly fee to retain the domain
-						name (the url e.g. www.youwebsite.com). The typical
+						name (the url e.g. www.yourwebsite.com). The typical
 						price of a domain can vary wildly but is often in the
 						range of $15–$35 per year. Said price is not determined
-						by—nor payed to—me. You will be given the account
-						credentials to manage your domain, and may do with it
-						what you wish.
+						by—nor payed to—me.{' '}
+					</p>
+					<p>
+						Before paying for my services, I will tell you how much
+						the domain name you want is. You will be given the
+						account credentials to manage your domain, and may do
+						with it what you wish.
 					</p>
 				</>
 			),
@@ -180,7 +184,10 @@ export const FAQPage = () => {
 			question: 'What is the refund policy?',
 			answer: (
 				<>
-					<p>This service is non-refundable.</p>
+					<p>
+						This service is non-refundable. We will work on, and
+						agree upon, a design before the initial payment.
+					</p>
 				</>
 			),
 		},

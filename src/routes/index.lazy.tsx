@@ -26,10 +26,10 @@ export const HomePage = () => {
 						easily get in touch.
 					</p>
 					<p>
-						Your website should tell your story. I create custom
-						sites that reflect the unique personality of your
-						business, helping you stand out in a crowded online
-						space.
+						<b>Your</b> website should tell <b>your</b> story. I
+						create custom sites that reflect the unique personality
+						of your business, helping you <b>stand out</b> in a
+						crowded online space.
 					</p>
 					<div className='flex justify-center lg:inline-block'>
 						<Button asChild>
@@ -56,9 +56,10 @@ export const HomePage = () => {
 				bodyRight=<>
 					<p>
 						From clean, modern designs for online portfolios to
-						user-friendly e-commerce stores, I offer personalized
-						solutions tailored to your business type. Whatever your
-						goals, I can create a website that fits you perfectly.
+						user-friendly e-commerce stores, I offer{' '}
+						<b>personalized solutions</b> tailored to your business.
+						Whatever your goals are—I can create a website that fits
+						you perfectly.
 					</p>
 					<div className='flex justify-center lg:inline-block'>
 						<Button asChild>
