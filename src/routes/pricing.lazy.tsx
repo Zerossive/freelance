@@ -16,19 +16,19 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 
 export const PricingPage = () => {
-	const baseline = 300
+	const baseline = 335
 	const [features, setFeatures] = useState([
 		{
 			name: 'cms updates',
-			desc: 'Update content on the fly with no coding experience. Without this feature, there will be a small fee anytime you want simple changes to be made.',
-			price: 40,
+			desc: 'Update content on the fly with no coding experience. Without this feature, there would be a small fee anytime you want simple changes to be made.',
+			price: 60,
 			icon: <Pencil strokeWidth={1} />,
 			active: false,
 		},
 		{
 			name: 'graphic art',
 			desc: 'Custom designed artwork such as logos, banners, etc.',
-			price: 20,
+			price: 40,
 			icon: <Image strokeWidth={1} />,
 			active: false,
 		},
@@ -42,13 +42,13 @@ export const PricingPage = () => {
 		{
 			name: 'forms',
 			desc: 'Allow your users to fill out forms that can be sent to you.',
-			price: 40,
+			price: 45,
 			icon: <Mail strokeWidth={1} />,
 			active: false,
 		},
 		{
 			name: 'theme toggle',
-			desc: 'Allow the user to choose between different themes such as light or mode. dark',
+			desc: 'Allow the user to choose between different themes, such as light/dark mode.',
 			price: 20,
 			icon: <SwatchBook strokeWidth={1} />,
 			active: false,
@@ -112,9 +112,10 @@ export const PricingPage = () => {
 			</motion.ul>
 
 			<p className='pt-6 lg:container'>
-				The pricing on this page is for estimation only, and may not
-				reflect the final price. To get a more accurate quote, contact
-				me with you desired features as outlined in the{' '}
+				The pricing on this page is for estimation only, may not reflect
+				the final price, and is subject to change. To get a more
+				accurate quote, contact me with your desired features as
+				outlined in the{' '}
 				<Button variant='link' size='inline' asChild>
 					<Link to='/faq'>frequently asked questions</Link>
 				</Button>

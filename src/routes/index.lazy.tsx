@@ -93,8 +93,8 @@ export const HomePage = () => {
 				bodyRight=<>
 					<p>
 						I'm an experienced React developer with a strong
-						background in creating mobile-optimized, responsive web
-						applications using JavaScript frameworks. Skilled in
+						background of creating mobile-optimized, responsive web
+						applications using JavaScript frameworks. Skilled at
 						collaborating with teams and working independently,
 						quickly learning new technologies and incorporating
 						thoughtful modern UX design into projects.

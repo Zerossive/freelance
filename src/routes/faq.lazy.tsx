@@ -21,8 +21,8 @@ export const FAQPage = () => {
 							to accomplish.
 						</li>
 						<li>
-							There will be a back and forth to establish the
-							requested features in regards to pricing, and you
+							There will be back and forth to establish the
+							requested features with regard to pricing, and you
 							will be given an estimated price.
 						</li>
 						<li>
@@ -30,7 +30,7 @@ export const FAQPage = () => {
 							information such as: notable calls to action, tone,
 							any custom features you requested, and any overall
 							aesthetic decisions like content density or UI
-							sharpness. At this point there will be an agreement
+							sharpness. At this point, there will be an agreement
 							made on the final price.
 						</li>
 						<li>
@@ -47,7 +47,7 @@ export const FAQPage = () => {
 						<li>
 							On confirming the design, you will pay the agreed
 							upon price and work will begin. Throughout
-							development you may be asked clarifying questions
+							development, you may be asked clarifying questions
 							and be provided with work-in-progress updates should
 							the need arise.
 						</li>
@@ -71,7 +71,7 @@ export const FAQPage = () => {
 					<p>
 						This heavily depends on the quantity and complexity of
 						the requested features. A simple static site with no
-						extra features is likely to take around a week.
+						extra features is likely to take around 1–2 weeks.
 					</p>
 					<p>
 						If you have a more aggressive or flexible deadline, an
@@ -97,8 +97,8 @@ export const FAQPage = () => {
 			answer: (
 				<>
 					<p>
-						Custom features are anything not listed on the pricing
-						page that are more complicated that static text and
+						Custom features are things not listed on the pricing
+						page that are more complicated than static text and
 						images, typically involving user interactivity.
 					</p>
 					<p>
@@ -119,10 +119,10 @@ export const FAQPage = () => {
 						experience.
 					</p>
 					<p>
-						You will need to specify before-hand what content you
+						You will need to specify beforehand what content you
 						want to be able to change via the CMS. Should you want
 						to make changes to which parts of the site use the CMS,
-						a small fee with be required.
+						a small fee will be required.
 					</p>
 				</>
 			),
@@ -133,7 +133,7 @@ export const FAQPage = () => {
 				<>
 					<p>
 						Gaining access to the source code means that should you
-						mant to make changes to the website without my
+						want to make changes to the website without my
 						assistance, you can do so. You could, for example, give
 						the code to another developer were I not available.
 					</p>
@@ -169,13 +169,13 @@ export const FAQPage = () => {
 						name (the url e.g. www.yourwebsite.com). The typical
 						price of a domain can vary wildly but is often in the
 						range of $15–$35 per year. Said price is not determined
-						by—nor payed to—me.{' '}
+						by—nor paid to—me.
 					</p>
 					<p>
 						Before paying for my services, I will tell you how much
 						the domain name you want is. You will be given the
-						account credentials to manage your domain, and may do
-						with it what you wish.
+						account credentials to manage your domain, and you may
+						do with it what you wish.
 					</p>
 				</>
 			),
