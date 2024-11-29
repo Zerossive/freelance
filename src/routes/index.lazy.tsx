@@ -64,7 +64,7 @@ export const HomePage = () => {
 					<div className='flex justify-center lg:inline-block'>
 						<Button asChild>
 							<a
-								href='https://dannyharris.info/'
+								href='https://dannyharris.dev/'
 								className='no-underline'
 								target='_blank'
 							>
