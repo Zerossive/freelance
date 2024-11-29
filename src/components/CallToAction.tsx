@@ -45,7 +45,7 @@ export const CallToAction = () => {
 			{/* TITLE */}
 			<motion.div
 				className='mx-auto flex w-full text-3xl font-extrabold uppercase md:w-auto md:text-4xl'
-				initial={{ y: -100, opacity: 0 }}
+				initial={{ y: -50, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
 				transition={{ duration: 0.5, ease: 'circOut' }}
 			>
