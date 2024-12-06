@@ -51,7 +51,7 @@ export const ContactPage = () => {
 		console.log(values)
 
 		emailjs
-			.sendForm('service_3649z97x', 'template_3o8fbx4', e.target, {
+			.sendForm('service_3649z97', 'template_3o8fbx4', e.target, {
 				publicKey: 'user_XauhbreBLfDA1556zFwvO',
 			})
 			.then(
