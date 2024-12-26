@@ -8,9 +8,9 @@ import example_knb_400 from '@/assets/example_knb_400.webp'
 import example_imagerequest_full from '@/assets/example_image-request_full.webp'
 import example_imagerequest_1200 from '@/assets/example_image-request_1200.webp'
 import example_imagerequest_400 from '@/assets/example_image-request_400.webp'
-import example_dashboard_full from '@/assets/example_dashboard_full.webp'
-import example_dashboard_1200 from '@/assets/example_dashboard_1200.webp'
-import example_dashboard_400 from '@/assets/example_dashboard_400.webp'
+import example_portfolio_full from '@/assets/example_portfolio_full.webp'
+import example_portfolio_1200 from '@/assets/example_portfolio_1200.webp'
+import example_portfolio_400 from '@/assets/example_portfolio_400.webp'
 import { useState } from 'react'
 
 export const CallToAction = () => {
@@ -78,8 +78,8 @@ export const CallToAction = () => {
 				{/* IMAGE LEFT */}
 				<motion.div variants={growSlide}>
 					<img
-						src={example_dashboard_full}
-						srcSet={`${example_dashboard_400} 400w, ${example_dashboard_1200} 1200w`}
+						src={example_portfolio_full}
+						srcSet={`${example_portfolio_400} 400w, ${example_portfolio_1200} 1200w`}
 						className='scale-90 transform rounded-lg object-cover shadow-md -rotate-x-30 sm:rotate-x-0 sm:rotate-y-30'
 						alt='back example image of website rotated in 3d'
 						loading='eager'

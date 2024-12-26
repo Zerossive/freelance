@@ -1,6 +1,6 @@
 <h1>
   Freelance Web Dev
-  <img src='https://youneedawebsite.netlify.app/favicon.svg' style='background-color:transparent;' height='36px' align='right'/>
+  <img src='https://freelancewebdev.dev/favicon.svg' style='background-color:transparent;' height='36px' align='right'/>
 </h1>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ccf417c7-b4fa-40bc-ae42-d8bd1fe4110e/deploy-status)](https://app.netlify.com/sites/youneedawebsite/deploys)
@@ -14,4 +14,4 @@ A website is more than just an online presence—it's your digital storefront. W
 
 Your website should tell your story. I create custom sites that reflect the unique personality of your business, helping you stand out in a crowded online space.
 
-Learn more by checking out my [portfolio](https://dannyharris.dev/projects/), or trying it out at [youneedawebsite.netlify.app](https://youneedawebsite.netlify.app)!
+Learn more by checking out my [portfolio](https://dannyharris.dev/projects/), or trying it out at [freelancewebdev.dev](https://freelancewebdev.dev/)!
