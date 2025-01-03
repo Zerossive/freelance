@@ -65,23 +65,31 @@ export const PricingItem = ({
 				className,
 			)}
 		>
+			{/* Icon */}
 			<motion.div
 				className='*:h-full *:w-full *:text-primary aspect-square min-w-fit max-w-[50%] flex-1 lg:order-last'
 				initial={{ opacity: 0, rotate: -90 }}
 				whileInView={{ opacity: 1, rotate: 0 }}
-				viewport={{ once: true, margin: '-100px' }}
+				viewport={{ once: true }}
 				transition={{ duration: 0.5, ease: 'circOut' }}
 			>
 				{icon}
 			</motion.div>
+
+			{/* Item Info */}
 			<div className='flex flex-[4] flex-col items-start justify-center gap-3 lg:flex-[10]'>
+				{/* Title */}
 				<span className='font-bold uppercase'>
 					{/* <span className='*:h-full *:w-full *:text-primary mr-3 inline-block aspect-square h-10 translate-y-1/3'> */}
 					{/* 	{icon} */}
 					{/* </span> */}
 					{name}
 				</span>
+
+				{/* Description */}
 				<span className='max-w-prose'>{desc}</span>
+
+				{/* Buttons */}
 				{price !== 0 && (
 					<Button
 						variant={active ? 'accent' : 'default'}

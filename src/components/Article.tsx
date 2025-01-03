@@ -51,7 +51,7 @@ export const Article = ({
 					)}
 					initial={{ x: -100, opacity: 0 }}
 					whileInView={{ x: 0, opacity: 1 }}
-					viewport={{ once: true, margin: '-200px' }}
+					viewport={{ once: true }}
 					transition={{ duration: 0.3, ease: 'circOut' }}
 				>
 					<article
@@ -72,7 +72,7 @@ export const Article = ({
 					)}
 					initial={{ x: 100, opacity: 0 }}
 					whileInView={{ x: 0, opacity: 1 }}
-					viewport={{ once: true, margin: '-200px' }}
+					viewport={{ once: true }}
 					transition={{ duration: 0.3, ease: 'circOut' }}
 				>
 					<article
@@ -101,7 +101,7 @@ export const Article = ({
 					alt='screenshot of example website'
 					initial={{ x: -100, opacity: 0 }}
 					whileInView={{ x: 0, opacity: 1 }}
-					viewport={{ once: true, margin: '-200px' }}
+					viewport={{ once: true }}
 					transition={{ duration: 0.3, ease: 'circOut' }}
 				></motion.img>
 			)}
@@ -120,7 +120,7 @@ export const Article = ({
 					alt='screenshot of example website'
 					initial={{ x: 100, opacity: 0 }}
 					whileInView={{ x: 0, opacity: 1 }}
-					viewport={{ once: true, margin: '-200px' }}
+					viewport={{ once: true }}
 					transition={{ duration: 0.3, ease: 'circOut' }}
 				></motion.img>
 			)}
