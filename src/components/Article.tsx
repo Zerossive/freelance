@@ -1,128 +1,89 @@
-import React from 'react'
-import { twMerge } from 'tailwind-merge'
-import { motion } from 'framer-motion'
+import React, { useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
+import { cn } from '@/lib/utils'
 
 interface ArticleProps extends React.ComponentPropsWithoutRef<'div'> {
-	imageLeft?: string
-	imageLeftSet?: string
-	imageRight?: string
-	imageRightSet?: string
-	titleLeft?: string
-	bodyLeft?: React.ReactNode
-	titleRight?: string
-	bodyRight?: React.ReactNode
-	left?: string
-	right?: string
+	image?: string
+	imageSet?: string
+	imageAlt?: string
+	imageClassName?: string
+	article?: React.ReactNode
+	articleClassName?: string
 	card?: boolean
+	cardColor?: string
+	reverse?: boolean
+	first?: boolean
 	className?: string
 }
 
 export const Article = ({
-	imageLeft,
-	imageLeftSet,
-	imageRight,
-	imageRightSet,
-	titleLeft,
-	bodyLeft,
-	titleRight,
-	bodyRight,
-	left,
-	right,
-	card,
+	image,
+	imageSet,
+	imageAlt,
+	imageClassName,
+	article,
+	articleClassName,
+	card = false,
+	cardColor = 'bg-primary/10',
+	reverse = false,
+	first = false,
 	className,
-	...rest
+	...props
 }: ArticleProps) => {
+	const [isLoaded, setIsLoaded] = useState(false)
+
 	return (
 		<div
-			className={twMerge(
-				'flex flex-col items-center justify-between gap-6 pt-32 first-of-type:pt-16 lg:flex-row lg:gap-12 lg:pt-64',
-				card && '-mx-12',
+			className={cn(
+				'mt-32 flex w-full flex-col items-center justify-between gap-6 lg:flex-row xl:p-12',
+				first && 'mt-0',
+				(!image || !article) && 'lg:flex-col',
+				reverse && 'lg:flex-row-reverse',
 				className,
 			)}
-			{...rest}
+			{...props}
 		>
-			{(titleLeft || bodyLeft) && (
+			{/* Article */}
+			{article && (
 				<motion.div
-					className={twMerge(
-						'order-first w-full text-primary-foreground lg:w-1/2 xl:p-12',
-						card &&
-							'bg-primary/80 p-6 shadow-md backdrop-blur lg:rounded-r-xl',
-						left,
-					)}
-					initial={{ x: -100, opacity: 0 }}
+					initial={{ x: reverse ? 100 : -100, opacity: 0 }}
 					whileInView={{ x: 0, opacity: 1 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.3, ease: 'circOut' }}
+					className={cn(
+						'prose lg:w-1/2',
+						reverse && !card && 'lg:text-right',
+						card &&
+							'prose-invert rounded-xl bg-primary p-6 shadow-md',
+						articleClassName,
+					)}
 				>
-					<article
-						className={twMerge('prose', card && 'prose-invert')}
-					>
-						{titleLeft && <h2>{titleLeft}</h2>}
-						{bodyLeft && <div>{bodyLeft}</div>}
-					</article>
+					{article}
 				</motion.div>
 			)}
-			{(titleRight || bodyRight) && (
-				<motion.div
-					className={twMerge(
-						'order-last w-full text-primary-foreground lg:w-1/2 xl:p-12',
-						card &&
-							'bg-primary/80 p-6 shadow-md backdrop-blur lg:rounded-l-xl lg:rounded-r-none',
-						right,
-					)}
-					initial={{ x: 100, opacity: 0 }}
-					whileInView={{ x: 0, opacity: 1 }}
-					viewport={{ once: true }}
-					transition={{ duration: 0.3, ease: 'circOut' }}
-				>
-					<article
-						className={twMerge(
-							'lg:float-end prose lg:text-right',
-							card && 'prose-invert',
+
+			{/* Image */}
+			{image && (
+				<div className='lg:w-1/2'>
+					<motion.img
+						key={image}
+						initial={{ x: reverse ? -50 : 50, opacity: 0 }}
+						whileInView={isLoaded ? { x: 0, opacity: 1 } : {}}
+						viewport={{ once: true }}
+						transition={{ duration: 0.3, ease: 'circOut' }}
+						src={image}
+						srcSet={imageSet}
+						alt={imageAlt}
+						className={cn(
+							'max-h-[80svh] rounded-xl bg-primary object-contain object-center shadow-md',
+							imageClassName,
 						)}
-					>
-						{titleRight && <h2>{titleRight}</h2>}
-						{bodyRight && <div>{bodyRight}</div>}
-					</article>
-				</motion.div>
-			)}
-			{imageLeft && (
-				<motion.img
-					className={twMerge(
-						'order-last aspect-video w-full rounded-xl object-cover object-left-top shadow-md lg:order-none lg:w-1/2',
-						!card && 'xl:ml-12',
-						card &&
-							!titleLeft &&
-							'rounded-none lg:rounded-xl lg:rounded-l-none',
-						left,
-					)}
-					src={imageLeft}
-					srcSet={imageLeftSet}
-					alt='screenshot of example website'
-					initial={{ x: -100, opacity: 0 }}
-					whileInView={{ x: 0, opacity: 1 }}
-					viewport={{ once: true }}
-					transition={{ duration: 0.3, ease: 'circOut' }}
-				></motion.img>
-			)}
-			{imageRight && (
-				<motion.img
-					className={twMerge(
-						'aspect-video w-full rounded-xl object-cover object-left-top shadow-md lg:w-1/2',
-						!card && 'xl:mr-12',
-						card &&
-							!titleRight &&
-							'rounded-none lg:rounded-xl lg:rounded-r-none',
-						right,
-					)}
-					src={imageRight}
-					srcSet={imageRightSet}
-					alt='screenshot of example website'
-					initial={{ x: 100, opacity: 0 }}
-					whileInView={{ x: 0, opacity: 1 }}
-					viewport={{ once: true }}
-					transition={{ duration: 0.3, ease: 'circOut' }}
-				></motion.img>
+						onLoad={() => {
+							setIsLoaded(true)
+						}}
+						loading='lazy'
+					/>
+				</div>
 			)}
 		</div>
 	)
