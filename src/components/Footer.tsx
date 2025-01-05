@@ -28,9 +28,9 @@ export const Footer = () => {
 								variant='link'
 								className='text-foreground'
 								size='inline'
-								asChild
+								to={link.url}
 							>
-								<Link to={link.url}>{link.name}</Link>
+								{link.name}
 							</Button>
 						</li>
 					))}

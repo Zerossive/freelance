@@ -187,10 +187,8 @@ export const ContactPage = () => {
 						<p>
 							If you have specific questions, it may be quicker to
 							read through the{' '}
-							<Button variant='link' size='inline' asChild>
-								<Link to='/faq'>
-									frequently asked questions
-								</Link>
+							<Button variant='link' size='inline' to='/faq'>
+								frequently asked questions
 							</Button>{' '}
 							before emailing me.
 						</p>
@@ -204,20 +202,16 @@ export const ContactPage = () => {
 									variant='link'
 									size='inline'
 									type='button'
-									asChild
+									to={`mailto:${import.meta.env.VITE_EMAIL}`}
 								>
-									<a href='mailto:{import.meta.env.VITE_EMAIL}'>
-										{import.meta.env.VITE_EMAIL}
-									</a>
+									{import.meta.env.VITE_EMAIL}
 								</Button>
 								.
 							</p>
 						)}
 						<div className='flex w-full flex-wrap justify-center gap-6 lg:justify-start'>
-							<Button type='button' size='icon' asChild>
-								<Link to='/faq'>
-									<CircleHelp />
-								</Link>
+							<Button type='button' size='icon' to='/faq'>
+								<CircleHelp />
 							</Button>
 							<Button type='submit' variant='secondary'>
 								<Send />

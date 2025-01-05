@@ -181,8 +181,8 @@ export const PricingPage = () => {
 				the final price, and is subject to change. To get a more
 				accurate quote, contact me with your desired features as
 				outlined in the{' '}
-				<Button variant='link' size='inline' asChild>
-					<Link to='/faq'>frequently asked questions</Link>
+				<Button variant='link' size='inline' to='/faq'>
+					frequently asked questions
 				</Button>
 				.
 			</p>
@@ -202,17 +202,13 @@ export const PricingPage = () => {
 			</div>
 
 			<div className='flex w-full flex-wrap items-center justify-center gap-6 pt-6'>
-				<Button size='icon' asChild>
-					<Link to='/faq'>
-						<CircleHelp />
-					</Link>
+				<Button size='icon' to='/faq'>
+					<CircleHelp />
 				</Button>
 
-				<Button variant='secondary' asChild>
-					<Link to='/contact'>
-						<Mail />
-						get in contact
-					</Link>
+				<Button variant='secondary' to='/contact'>
+					<Mail />
+					get in contact
 				</Button>
 			</div>
 		</>

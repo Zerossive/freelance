@@ -29,14 +29,12 @@ export const Navbar = () => {
 					/>
 				</Button>
 				<Button
-					className='text-foreground'
+					className='hidden text-foreground md:inline-block'
 					variant='link'
 					size='inline'
-					asChild
+					to='/'
 				>
-					<Link to='/' className='hidden md:inline-block'>
-						freelance web dev
-					</Link>
+					freelance web dev
 				</Button>
 			</div>
 			<nav>

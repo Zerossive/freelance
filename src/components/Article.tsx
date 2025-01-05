@@ -75,7 +75,8 @@ export const Article = ({
 						srcSet={imageSet}
 						alt={imageAlt}
 						className={cn(
-							'max-h-[80svh] rounded-xl bg-primary object-contain object-center shadow-md',
+							'float-right max-h-[80svh] rounded-xl bg-primary object-contain object-center shadow-md',
+							reverse && 'float-left',
 							imageClassName,
 						)}
 						onLoad={() => {

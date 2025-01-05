@@ -200,8 +200,8 @@ export const FAQPage = () => {
 				<p className='container px-0 pb-6'>
 					If you do not find a satisfactory answer, or have any
 					further questions, please contact me{' '}
-					<Button variant='link' size='inline' asChild>
-						<Link to='/contact'>here</Link>
+					<Button variant='link' size='inline' to='/contact'>
+						here
 					</Button>
 					.
 				</p>

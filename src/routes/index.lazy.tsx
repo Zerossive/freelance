@@ -1,7 +1,7 @@
 import { createLazyFileRoute } from '@tanstack/react-router'
 import { CallToAction } from '@/components/CallToAction'
 import { Button } from '@/components/ui/button'
-import { CircleUser, ExternalLink, PanelsTopLeft } from 'lucide-react'
+import { ExternalLink } from 'lucide-react'
 import example_knb_full from '@/assets/example_knb_full.webp'
 import example_knb_1200 from '@/assets/example_knb_1200.webp'
 import example_knb_400 from '@/assets/example_knb_400.webp'
@@ -40,15 +40,9 @@ export const HomePage = () => {
 						crowded online space.
 					</p>
 					<div className='flex justify-center lg:inline-block'>
-						<Button asChild>
-							<a
-								href='https://knbracing.com/'
-								className='no-underline'
-								target='_blank'
-							>
-								<ExternalLink />
-								view example
-							</a>
+						<Button to='https://knbracing.com/'>
+							<ExternalLink />
+							view example
 						</Button>
 					</div>
 				</>
@@ -70,15 +64,9 @@ export const HomePage = () => {
 						you perfectly.
 					</p>
 					<div className='flex justify-center lg:inline-block'>
-						<Button asChild>
-							<a
-								href='https://dannyharris.dev/'
-								className='no-underline'
-								target='_blank'
-							>
-								<ExternalLink />
-								view example
-							</a>
+						<Button to='https://dannyharris.dev/'>
+							<ExternalLink />
+							view example
 						</Button>
 					</div>
 				</>
@@ -102,13 +90,21 @@ export const HomePage = () => {
 							viewport={{ once: true }}
 							transition={{ duration: 0.5, ease: 'circOut' }}
 						>
-							<PanelsTopLeft className='h-full w-full text-primary' />
+							<img
+								src='/favicon.svg'
+								className='h-full w-full'
+								alt='website logo'
+							/>
 						</motion.div>
 
 						{/* Article */}
 						<article className='prose'>
 							<h2 className='flex items-center gap-3'>
-								<PanelsTopLeft className='text-primary xl:hidden' />
+								<img
+									src='/favicon.svg'
+									className='m-0 h-10 w-auto xl:hidden'
+									alt='website logo'
+								/>
 								about the service
 							</h2>
 							<p>
@@ -127,7 +123,11 @@ export const HomePage = () => {
 						{/* Article */}
 						<article className='prose xl:text-right'>
 							<h2 className='flex items-center gap-3 xl:justify-end'>
-								<CircleUser className='text-primary xl:hidden' />
+								<img
+									src='https://dannyharris.dev/favicon.svg'
+									className='m-0 h-10 w-auto xl:hidden'
+									alt='website logo'
+								/>
 								about me
 							</h2>
 							<p>
@@ -149,7 +149,11 @@ export const HomePage = () => {
 							viewport={{ once: true }}
 							transition={{ duration: 0.5, ease: 'circOut' }}
 						>
-							<CircleUser className='h-full w-full text-accent' />
+							<img
+								src='https://dannyharris.dev/favicon.svg'
+								className='h-full w-full'
+								alt='website logo'
+							/>
 						</motion.div>
 					</CarouselItem>
 				</CarouselContent>

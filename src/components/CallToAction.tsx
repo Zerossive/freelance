@@ -119,17 +119,13 @@ export const CallToAction = () => {
 				animate={{ y: 0, opacity: 1 }}
 				transition={{ delay: 0.4, duration: 0.5, ease: 'circOut' }}
 			>
-				<Button size='lg' asChild>
-					<Link to='/faq'>
-						<CircleHelp />
-						faq
-					</Link>
+				<Button size='lg' to='/faq'>
+					<CircleHelp />
+					faq
 				</Button>
-				<Button variant='secondary' size='lg' asChild>
-					<Link to='/contact'>
-						<Mail />
-						get in contact
-					</Link>
+				<Button variant='secondary' size='lg' to='/contact'>
+					<Mail />
+					get in contact
 				</Button>
 			</motion.div>
 		</section>
