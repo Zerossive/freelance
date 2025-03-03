@@ -1,6 +1,5 @@
 import { CircleHelp, Mail } from 'lucide-react'
 import { Button } from './ui/button'
-import { Link } from '@tanstack/react-router'
 import { motion } from 'framer-motion'
 import example_knb_full from '@/assets/example_knb_full.webp'
 import example_knb_1200 from '@/assets/example_knb_1200.webp'

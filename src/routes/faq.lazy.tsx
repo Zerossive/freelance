@@ -6,7 +6,7 @@ import {
 	AccordionTrigger,
 } from '@/components/ui/accordion'
 import { Button } from '@/components/ui/button'
-import { createLazyFileRoute, Link } from '@tanstack/react-router'
+import { createLazyFileRoute } from '@tanstack/react-router'
 import { motion } from 'framer-motion'
 
 export const FAQPage = () => {

@@ -1,7 +1,7 @@
 import { Header } from '@/components/Header'
 import { PricingItem } from '@/components/PricingItem'
 import { Button } from '@/components/ui/button'
-import { createLazyFileRoute, Link } from '@tanstack/react-router'
+import { createLazyFileRoute } from '@tanstack/react-router'
 import {
 	CircleHelp,
 	CodeXml,

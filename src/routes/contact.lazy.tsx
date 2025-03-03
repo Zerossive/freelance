@@ -1,6 +1,6 @@
 import { Header } from '@/components/Header'
 import { Button } from '@/components/ui/button'
-import { createLazyFileRoute, Link } from '@tanstack/react-router'
+import { createLazyFileRoute } from '@tanstack/react-router'
 import { useState } from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'

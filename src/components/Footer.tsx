@@ -1,5 +1,4 @@
 import { Button } from './ui/button'
-import { Link } from '@tanstack/react-router'
 import logoWhite from '@/assets/fwd-icon-white.svg'
 
 export const Footer = () => {
