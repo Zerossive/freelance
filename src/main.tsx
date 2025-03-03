@@ -11,6 +11,7 @@ import { routeTree } from './routeTree.gen'
 const router = createRouter({
 	routeTree,
 	defaultNotFoundComponent: NotFound,
+	defaultPreload: 'intent',
 })
 
 // Register the router instance for type safety
