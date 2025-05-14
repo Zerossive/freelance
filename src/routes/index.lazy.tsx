@@ -19,6 +19,18 @@ import { motion } from 'framer-motion'
 import { Article } from '@/components/Article'
 
 export const HomePage = () => {
+	const carouselItems = [
+		{
+			imageSrc: '/favicon.svg',
+			title: 'about the service',
+			body: "I create custom websites tailored to your needs, focusing on clean design, functionality, and user experience. Whether you're building an online presence or growing your brand, I'll help bring your vision to life with a website that looks great and works perfectly.",
+		},
+		{
+			imageSrc: 'https://dannyharris.dev/favicon.svg',
+			title: 'about me',
+			body: "I'm an experienced React developer with a strong background of creating mobile-optimized, responsive web applications using JavaScript frameworks. Skilled at collaborating with teams and working independently, quickly learning new technologies and incorporating thoughtful modern UX design into projects.",
+		},
+	]
 	return (
 		<>
 			<CallToAction></CallToAction>
@@ -80,82 +92,47 @@ export const HomePage = () => {
 				opts={{ loop: true, align: 'start' }}
 			>
 				<CarouselContent>
-					{/* About Service */}
-					<CarouselItem className='flex items-center justify-center gap-6 xl:basis-1/2'>
-						{/* Icon */}
-						<motion.div
-							className='hidden h-auto w-20 xl:block xl:h-full xl:w-full'
-							initial={{ opacity: 0, rotate: -90 }}
-							whileInView={{ opacity: 1, rotate: 0 }}
-							viewport={{ once: true }}
-							transition={{ duration: 0.5, ease: 'circOut' }}
-						>
-							<img
-								src='/favicon.svg'
-								className='h-full w-full'
-								alt='website logo'
-							/>
-						</motion.div>
+					{carouselItems.map((item, index) => {
+						const { imageSrc: imageSrc, title, body } = item
 
-						{/* Article */}
-						<article className='prose'>
-							<h2 className='flex items-center gap-3'>
-								<img
-									src='/favicon.svg'
-									className='m-0 h-10 w-auto xl:hidden'
-									alt='website logo'
-								/>
-								about the service
-							</h2>
-							<p>
-								I create custom websites tailored to your needs,
-								focusing on clean design, functionality, and
-								user experience. Whether you're building an
-								online presence or growing your brand, I'll help
-								bring your vision to life with a website that
-								looks great and works perfectly.
-							</p>
-						</article>
-					</CarouselItem>
+						return (
+							<CarouselItem
+								className='group flex items-center justify-center gap-6 xl:basis-1/2'
+								key={index}
+							>
+								{/* Icon */}
+								<motion.div
+									className='hidden h-auto w-20 items-center group-even:order-last xl:flex xl:h-full xl:w-full'
+									initial={{ opacity: 0, rotate: -90 }}
+									whileInView={{ opacity: 1, rotate: 0 }}
+									viewport={{ once: true }}
+									transition={{
+										duration: 0.5,
+										ease: 'circOut',
+									}}
+								>
+									<img
+										src={imageSrc}
+										className='w-full'
+										alt='website logo'
+									/>
+								</motion.div>
 
-					{/* About Me */}
-					<CarouselItem className='flex flex-row items-center justify-center gap-6 xl:basis-1/2'>
-						{/* Article */}
-						<article className='prose xl:text-right'>
-							<h2 className='flex items-center gap-3 xl:justify-end'>
-								<img
-									src='https://dannyharris.dev/favicon.svg'
-									className='m-0 h-10 w-auto xl:hidden'
-									alt='website logo'
-								/>
-								about me
-							</h2>
-							<p>
-								I'm an experienced React developer with a strong
-								background of creating mobile-optimized,
-								responsive web applications using JavaScript
-								frameworks. Skilled at collaborating with teams
-								and working independently, quickly learning new
-								technologies and incorporating thoughtful modern
-								UX design into projects.
-							</p>
-						</article>
-
-						{/* Icon */}
-						<motion.div
-							className='hidden h-auto w-20 xl:block xl:h-full xl:w-full'
-							initial={{ opacity: 0, rotate: -90 }}
-							whileInView={{ opacity: 1, rotate: 0 }}
-							viewport={{ once: true }}
-							transition={{ duration: 0.5, ease: 'circOut' }}
-						>
-							<img
-								src='https://dannyharris.dev/favicon.svg'
-								className='h-full w-full'
-								alt='website logo'
-							/>
-						</motion.div>
-					</CarouselItem>
+								{/* Article */}
+								<article className='prose'>
+									<h2 className='flex items-center gap-3'>
+										<img
+											src={imageSrc}
+											className='m-0 h-10 w-auto xl:hidden'
+											alt='website logo'
+										/>
+										{title}
+									</h2>
+									<p>{body}</p>
+								</article>
+							</CarouselItem>
+						)
+					})}
 				</CarouselContent>
 
 				{/* Carousel Controls */}

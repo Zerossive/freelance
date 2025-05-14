@@ -52,7 +52,6 @@ export const Article = ({
 					transition={{ duration: 0.3, ease: 'circOut' }}
 					className={cn(
 						'prose lg:w-1/2',
-						reverse && !card && 'lg:text-right',
 						card &&
 							'prose-invert rounded-xl bg-primary p-6 shadow-md',
 						articleClassName,
