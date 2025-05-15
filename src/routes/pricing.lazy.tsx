@@ -12,6 +12,7 @@ import {
 	SwatchBook,
 	PackagePlus,
 	DollarSign,
+	HandCoins,
 } from 'lucide-react'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
@@ -52,6 +53,13 @@ export const PricingPage = () => {
 			desc: 'Allow the user to choose between different themes, such as light/dark mode.',
 			price: 20,
 			icon: <SwatchBook strokeWidth={1.5} />,
+			active: false,
+		},
+		{
+			name: 'payment processing',
+			desc: 'Accept payments through various payment processors.',
+			price: 150,
+			icon: <HandCoins strokeWidth={1.5} />,
 			active: false,
 		},
 		{
