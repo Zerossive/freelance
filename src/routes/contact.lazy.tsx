@@ -187,7 +187,12 @@ export const ContactPage = () => {
 						<p>
 							If you have specific questions, it may be quicker to
 							read through the{' '}
-							<Button variant='link' size='inline' to='/faq'>
+							<Button
+								type='button'
+								variant='link'
+								size='inline'
+								to='/faq'
+							>
 								frequently asked questions
 							</Button>{' '}
 							before emailing me.
